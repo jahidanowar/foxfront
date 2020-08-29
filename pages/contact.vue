@@ -58,14 +58,14 @@
 <script>
 import PageHero from '~/components/PageHero'
 export default {
+  components: {
+    PageHero,
+  },
   data() {
     return {
       title: 'Contact Us',
       progress: false,
     }
-  },
-  components: {
-    PageHero,
   },
   watch: {
     progress() {

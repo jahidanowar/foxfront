@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   /*
    ** Nuxt rendering mode
@@ -77,7 +75,9 @@ export default {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    optionsPath: "./vuetify.options.js"
+    optionsPath: "./vuetify.options.js",
+    treeShake: true,
+
   },
   /*
    ** Build configuration

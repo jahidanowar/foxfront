@@ -9,8 +9,14 @@
 export default {
   name: 'Heading',
   props: {
-    title: String,
-    height: Number,
+    title: {
+      type: String,
+      required: true,
+    },
+    height: {
+      type: Number,
+      default: 30,
+    },
   },
 }
 </script>

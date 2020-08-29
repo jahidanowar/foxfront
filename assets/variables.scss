@@ -1,4 +1,26 @@
 // Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
 // The variables you want to modify
-// $font-size-root: 20px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('~assets/fonts/metropolis/EOT/Metropolis-Bold.eot'); /* IE9 Compat Modes */
+  src: url('~assets/fonts/metropolis/EOT/Metropolis-Bold.eot')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('~assets/fonts/metropolis/WOFF2/Metropolis-Bold.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('~assets/fonts/metropolis/WOFF/Metropolis-Bold.woff') format('woff');
+  font-weight: 700; /* Pretty Modern Browsers */
+}
+
+$body-font-family: 'Inter' !default;
+$heading-font-family: 'Metropolis' !default;
+$border-radius-root: 0;
+$font-size-root: 18px;
+
+h1,h2,h3,h4,h5{
+  font-family: $heading-font-family;
+}
+@import '~vuetify/src/styles/styles.sass';

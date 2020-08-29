@@ -15,10 +15,22 @@
 export default {
   name: 'Blurb',
   props: {
-    size: String,
-    title: String,
-    image: String,
-    description: String,
+    size: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>

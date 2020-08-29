@@ -1,9 +1,9 @@
 <template>
   <v-app id="inspire">
     <Appbar />
-    <v-content>
+    <v-main>
       <Nuxt />
-    </v-content>
+    </v-main>
     <PageFooter />
   </v-app>
 </template>

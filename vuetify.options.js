@@ -1,5 +1,3 @@
-import colors from "vuetify/es5/util/colors";
-
 export default {
   theme: {
     dark: false,
@@ -22,6 +20,6 @@ export default {
         bg1: "#1e1e1e"
       },
     },
-    
+
   }
 };

@@ -10,14 +10,14 @@
 <script>
 import PageHero from '~/components/PageHero'
 export default {
+  components: {
+    PageHero,
+  },
   data() {
     return {
       title: 'About Us',
       description: 'About Us Meta Descrituion',
     }
-  },
-  components: {
-    PageHero,
   },
   head() {
     return {

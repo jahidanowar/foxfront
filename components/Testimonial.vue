@@ -24,10 +24,22 @@
 export default {
   name: 'Testimonial',
   props: {
-    backgroundColor: String,
-    name: String,
-    designation: String,
-    avatar: String,
+    backgroundColor: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    designation: {
+      type: String,
+      required: true,
+    },
+    avatar: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>

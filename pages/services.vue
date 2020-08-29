@@ -12,12 +12,12 @@
         <Heading title="What We Do ?" :height="5" />
         <v-row>
           <v-col
+            v-for="service in services"
+            :key="service.title"
             cols="12"
             md="6"
             sm="12"
             xs="12"
-            v-for="service in services"
-            :key="service.title"
           >
             <Blurb
               size="100"
@@ -34,7 +34,7 @@
     <!-- Call to action -->
     <CallToAction
       title="Ready to Create The Next Big Thing?"
-      buttonText="Start A Project"
+      button-text="Start A Project"
       to="/contact"
     />
     <!-- Call to action Ends -->
@@ -48,6 +48,12 @@ import Blurb from '~/components/Blurb'
 import Heading from '~/components/Heading'
 
 export default {
+  components: {
+    PageHero,
+    CallToAction,
+    Blurb,
+    Heading,
+  },
   data() {
     return {
       title: 'Foxflue Network',
@@ -84,12 +90,6 @@ export default {
         },
       ],
     }
-  },
-  components: {
-    PageHero,
-    CallToAction,
-    Blurb,
-    Heading,
   },
 }
 </script>

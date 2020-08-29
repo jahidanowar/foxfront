@@ -5,16 +5,18 @@
       <div class="header">
         <v-row align="center" justify="center">
           <v-col>
-            <h1 class="header-title">
+            <h1 class="header-title mb-4">
               We Provide Result Driven Digital Solution<span
                 class="primary--text"
                 >.</span
               >
             </h1>
-            <p class="header-description">
-              We make websites for awesome business like yours. Let us help you
-              to make your brand online .
-            </p>
+            <div class="mb-4">
+              <p class="header-description">
+                We make websites for awesome business like yours. Let us help
+                you to make your brand online .
+              </p>
+            </div>
             <v-btn color="primary" large tile depressed to="/about" nuxt
               >Learn More</v-btn
             >
@@ -30,10 +32,11 @@
             >
           </v-col>
           <v-col align="center">
-            <v-img
-              src="https://foxflue.com/wp-content/uploads/2020/03/foxflue-web-design-illustration.png"
-              max-width="400"
-            ></v-img>
+            <lottie-animation
+              path="lottie/18123-developer.json"
+              :width="256"
+              :height="256"
+            />
           </v-col>
         </v-row>
       </div>
@@ -77,12 +80,12 @@
         <Heading title="What We Do ?" :height="5" />
         <v-row>
           <v-col
+            v-for="service in services"
+            :key="service.title"
             cols="12"
             md="6"
             sm="12"
             xs="12"
-            v-for="service in services"
-            :key="service.title"
           >
             <Blurb
               size="100"
@@ -102,16 +105,17 @@
         <Heading title="What Clients Say About Us" :height="5" />
         <v-row>
           <v-col
+            v-for="testimonial in testimonials"
+            :key="testimonial.name"
             cols="12"
             md="4"
             sm="6"
-            v-for="testimonial in testimonials"
-            :key="testimonial.name"
           >
             <Testimonial
               :name="testimonial.name"
               :avatar="testimonial.avatar"
               :designation="testimonial.designation"
+              background-color=" "
             >
               "{{ testimonial.review }}"
             </Testimonial>
@@ -124,7 +128,7 @@
     <!-- Call to action -->
     <CallToAction
       title="Ready to Create The Next Big Thing?"
-      buttonText="Start A Project"
+      button-text="Start A Project"
       to="/contact"
     />
     <!-- Call to action Ends -->
@@ -132,17 +136,18 @@
 </template>
 
 <script>
+import LottieAnimation from '~/components/LottieAnimation'
 import Blurb from '~/components/Blurb.vue'
 import Heading from '~/components/Heading'
 import Testimonial from '~/components/Testimonial'
 import CallToAction from '~/components/CallToAction'
-
 export default {
   components: {
     Blurb,
     Heading,
     Testimonial,
     CallToAction,
+    LottieAnimation,
   },
   data() {
     return {
@@ -227,11 +232,9 @@ export default {
   padding: 5% 0;
   &-title {
     font-size: 3rem;
-    margin-bottom: 1rem;
   }
   &-description {
     font-size: 1.4rem;
-    margin-bottom: 1rem;
   }
 }
 .content-area {

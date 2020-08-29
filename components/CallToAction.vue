@@ -17,9 +17,18 @@
 export default {
   name: 'CallToAction',
   props: {
-    title: String,
-    buttonText: String,
-    to: String,
+    title: {
+      type: String,
+      required: true,
+    },
+    buttonText: {
+      type: String,
+      required: true,
+    },
+    to: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
