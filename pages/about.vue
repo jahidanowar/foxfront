@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <PageHero title="Who We Are?"
-      >Ready To Grow? <br />
-      We look forward to hearing from you</PageHero
+      >We are a group of highly skilled experts aiming to provide innovation and
+      flexibility to your Business.</PageHero
     >
   </div>
 </template>

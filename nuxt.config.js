@@ -25,7 +25,10 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css' }
+    ],
   },
   /*
   ** Customize the progress-bar color
@@ -77,7 +80,7 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     optionsPath: "./vuetify.options.js",
     treeShake: true,
-
+    defaultAssets: false,
   },
   /*
    ** Build configuration

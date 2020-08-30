@@ -19,5 +19,9 @@ export default {
   },
 }
 </script>
-
-<style></style>
+<style lang="scss">
+.section-title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+</style>

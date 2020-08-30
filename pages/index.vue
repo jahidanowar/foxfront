@@ -11,7 +11,7 @@
                 >.</span
               >
             </h1>
-            <div class="mb-4">
+            <div class="mb-5">
               <p class="header-description">
                 We make websites for awesome business like yours. Let us help
                 you to make your brand online .
@@ -32,10 +32,11 @@
             >
           </v-col>
           <v-col align="center">
-            <lottie-animation
-              path="lottie/18123-developer.json"
-              :width="256"
-              :height="256"
+            <lottie
+              :options="defaultOptions"
+              :height="400"
+              :width="400"
+              @animCreated="handleAnimation"
             />
           </v-col>
         </v-row>
@@ -136,18 +137,20 @@
 </template>
 
 <script>
-import LottieAnimation from '~/components/LottieAnimation'
+import Lottie from 'vue-lottie/src/lottie.vue'
+import * as animationData1 from '~/assets/lottie/feature.json'
 import Blurb from '~/components/Blurb.vue'
 import Heading from '~/components/Heading'
 import Testimonial from '~/components/Testimonial'
 import CallToAction from '~/components/CallToAction'
+
 export default {
   components: {
     Blurb,
     Heading,
     Testimonial,
     CallToAction,
-    LottieAnimation,
+    Lottie,
   },
   data() {
     return {
@@ -210,7 +213,13 @@ export default {
             'Jahid took time to understand the requirements and finished before the deadline set. His task was to create a multi-lingual landing page with automatic language change based on location, and he did it successfully in a timely manne',
         },
       ],
+      defaultOptions: { animationData: animationData1, animationSpeed: 1 },
     }
+  },
+  methods: {
+    handleAnimation(anim) {
+      this.anim = anim
+    },
   },
   head() {
     return {
@@ -231,10 +240,11 @@ export default {
 .header {
   padding: 5% 0;
   &-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    line-height: 1.1;
   }
   &-description {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 .content-area {

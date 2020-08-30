@@ -1,6 +1,6 @@
 <template>
   <div class="content-area-title text-center">
-    <hr class="divider" :style="{ 'margin-bottom': height + 'px' }" />
+    <!-- <hr class="divider" :style="{ 'margin-bottom': height + 'px' }" /> -->
     <h2>{{ title }}</h2>
   </div>
 </template>
@@ -30,6 +30,7 @@ export default {
 .content-area-title {
   margin-bottom: 30px;
   h2 {
+    line-height: 1.1;
     font-size: 2rem;
   }
 }

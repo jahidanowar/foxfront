@@ -5,7 +5,7 @@
         <v-row align="center" justify="center">
           <v-col cols="12" md="4" sm="12" xs="12">
             <v-img
-              src="https://foxflue.com/wp-content/uploads/2020/03/foxflue-network-new-logo.png"
+              src="/images/foxflue-network-new-logo.png"
               max-width="250"
             ></v-img>
           </v-col>
@@ -13,22 +13,28 @@
             <h3>Web Design</h3>
             <ul class="footer-menu">
               <li>
-                <nuxt-link to="/about" class="textcolor--text"
+                <nuxt-link
+                  to="/service/wordpress-website"
+                  class="textcolor--text"
                   >WordPress Webite Development</nuxt-link
                 >
               </li>
               <li>
-                <nuxt-link to="/contact" class="textcolor--text"
+                <nuxt-link
+                  to="/service/ecommerce-website"
+                  class="textcolor--text"
                   >eCommerce Website Development</nuxt-link
                 >
               </li>
               <li>
-                <nuxt-link to="/privacy-policy" class="textcolor--text"
+                <nuxt-link
+                  to="/service/business-website"
+                  class="textcolor--text"
                   >Business Website</nuxt-link
                 >
               </li>
               <li>
-                <nuxt-link to="/terms-and-conditions" class="textcolor--text"
+                <nuxt-link to="/service/graphic-design" class="textcolor--text"
                   >Graphics Design</nuxt-link
                 >
               </li>
