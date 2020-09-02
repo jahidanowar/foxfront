@@ -6,7 +6,9 @@
           <h1 class="page-title">{{ title }}</h1>
           <p class="mt-3 page-description"><slot></slot></p>
         </v-col>
-        <v-col cols="6"></v-col>
+        <v-col cols="6">
+          <img :src="image" alt="title" class="featured-image" />
+        </v-col>
       </v-row>
     </v-container>
   </v-container>
@@ -19,6 +21,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    image: {
+      type: String,
+      default: '',
     },
   },
 }

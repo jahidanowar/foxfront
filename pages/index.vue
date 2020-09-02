@@ -17,8 +17,8 @@
                 you to make your brand online .
               </p>
             </div>
-            <v-btn color="primary" large tile depressed to="/about" nuxt
-              >Learn More</v-btn
+            <v-btn color="primary" large tile depressed to="/our-works" nuxt
+              >View Portfolio</v-btn
             >
             <v-btn
               color="primary"
@@ -28,7 +28,7 @@
               class="ml-3"
               to="/contact"
               nuxt
-              >Let's Talk</v-btn
+              >Discuss your project</v-btn
             >
           </v-col>
           <v-col align="center">
